@@ -1,0 +1,48 @@
+<section class="abaut" id="abaut">
+    <div class="container">
+        <div class="abaut__top">
+            <div class="abaut__top-text">
+                <h2 class="abaut__title">О нас</h2>
+                <h4 class="abaut__descr-bold">Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!</h4>
+                <p class="abaut__descr">
+                    Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув
+                    на наши соцсети в подвале сайта. Спасибо! Услышимся! :)</p>
+            </div>
+            <img src="img/spiral.svg" alt="spiral" class="abaut-icon">
+            <img src="img/sun.svg" alt="spiral" class="abaut-icon-sun">
+        </div>
+        <div class="abaut__card">
+            <div class="abaut__card-acticle">
+                <img src="img/abaut-card_1.jpg" alt="foto" class="abaut__card-img">
+                <h3 class="abaut__card-title">Дмитрий Гутенберг</h3>
+                <span class="abaut__card-descr">Эксперт (ну, почти) по всем вопросам (почти).</span>
+            </div>
+            <div class="abaut__card-acticle">
+                <img src="img/abaut-card_2.jpg" alt="foto" class="abaut__card-img">
+                <h3 class="abaut__card-title">Анна Васильева</h3>
+                <span class="abaut__card-descr">Как я здесь оказалась? А главное — зачем?</span>
+            </div>
+            <div class="abaut__card-acticle">
+                <img src="img/abaut-card_3.jpg" alt="foto" class="abaut__card-img">
+                <h3 class="abaut__card-title">Пётр Дмитриевский</h3>
+                <span class="abaut__card-descr">Господа! Внимание!! Благодарю за внимание!!!</span>
+            </div>
+            <div class="abaut__card-acticle">
+                <img src="img/abaut-card_4.jpg" alt="foto" class="abaut__card-img">
+                <h3 class="abaut__card-title">Татьяна Флеганова</h3>
+                <span class="abaut__card-descr">Одна я в пальто стою красивая, а вокруг...</span>
+            </div>
+        </div>
+        <form id="form" class="abaut__form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+            <textarea class="abaut__form-area" name="comment" placeholder="Что скажете?"></textarea>
+            <input class="abaut__form-input" type="text" name="name" placeholder="Имя*" data-validate-field="name">
+            <input class="abaut__form-input" type="email" name="mail" placeholder="Email*" data-validate-field="email" data-validate-rules="mail">
+            <button type="submit" id="submit" class="btn-reset abaut__form-btn">Отправить</button>
+            <label class="custom-checkbox">
+              <input type="checkbox" id="check-on" class="custom-checkbox__field" checked onchange="document.getElementById('submit').disabled = !this.checked;">
+              <span class="custom-checkbox__content"></span>
+              Согласен на обработку персональных данных
+            </label>
+        </form>
+    </div>
+</section>

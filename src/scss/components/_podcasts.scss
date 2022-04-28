@@ -1,0 +1,110 @@
+.podcasts {
+    padding: 94px 0;
+    background-color: var(--color-light);
+    &__data {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        color: var(--color-black);
+        padding: 5px;
+        background-color: var(--color-white);
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    &__line {
+        width: 428px;
+        height: 1px;
+        color: #000;
+    }
+    &__article {
+        position: relative;
+        grid-column: 1 span;
+        display: flex;
+        background-color: var(--color-white);
+        &-img {
+            height: 140px;
+        }
+        &-contant {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &-top {
+            @include flex-all-sb;
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+        &-bottom {
+            padding: 10px 0;
+            padding-left: 30px;
+            border-top: 1px solid var(--color-light);
+        }
+        &-title {
+            margin: 0;
+            margin-bottom: 4px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
+            color: var(--color-black);
+        }
+        &-avtor {
+            margin: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            color: var(--color-gray);
+        }
+        &__box-btn {
+            position: absolute;
+            right: 30px;
+        }
+        &-btn {
+            width: 42px;
+            height: 42px;
+            fill: var(--color-gray);
+            stroke: var(--color-white);
+        }
+        &-icon {
+            width: 13px;
+            height: 13px;
+            fill: var(--color-gray);
+        }
+        &-span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            color: var(--color-gray);
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 30px;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 100%;
+        color: var(--color-black);
+    }
+    &__btn-basic {
+        display: block;
+        padding: 25px 54px;
+        border: 2px solid var(--color-primary);
+        border-radius: 40px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 20px;
+        color: var(--color-primary);
+        margin: 0 auto;
+        text-align: center;
+    }
+}

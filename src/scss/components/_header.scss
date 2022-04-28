@@ -1,0 +1,44 @@
+.header {
+    padding: 20px 0;
+    &-contant {
+        @include flex-all-sb;
+    }
+    &__logo {
+        width: 160px;
+        height: 20px;
+    }
+    &__search-icon {
+        padding-top: 5px;
+        width: 24px;
+        height: 24px;
+        fill: var(--color-white);
+        stroke: var(--color-primary);
+        margin-right: 24px;
+    }
+    &__rigth {
+        @include flex-v-center;
+    }
+    &__btn {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 10px 31px;
+        border: solid 2px var(--color-black);
+        border-radius: 77px;
+    }
+}
+
+.nav__list {
+    @include flex-v-center;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 58px;
+}
+
+.nav__link {
+    color: var(--color-black);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+}
