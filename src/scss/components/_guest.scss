@@ -38,6 +38,8 @@
         grid-column: 1 span;
         &-img {
             margin-bottom: 12px;
+            height: 220px;
+            width: 100%;
         }
         &-title {
             margin: 0;
@@ -138,4 +140,13 @@
 
 .accordion[open] .accordion__icon {
     transform: rotate(180deg);
+}
+
+.content-none {
+    display: none;
+}
+
+.content-activ,
+.tabs-btn {
+    display: block;
 }
