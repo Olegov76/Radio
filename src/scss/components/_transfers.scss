@@ -10,6 +10,7 @@
     }
     &__bottom {
         grid-column: 1 span;
+        grid-row: 2/3;
         padding-top: 39px;
         &-img {
             width: 65px;
@@ -40,6 +41,32 @@
             font-size: 16px;
             line-height: 16px;
             color: var(--color-black);
+            transition: color .3s ease-in-out backgrond-color .3s ease-in-out fill .3s ease-in-out stroke .3s ease-in-out;
+            &:hover {
+                color: var(--color-white);
+                background-color: var(--color-black);
+                .transfers__bottom-icon {
+                    fill: var(--color-black);
+                    stroke: var(--color-white);
+                }
+            }
+            &:focus {
+                background-color: var(--color-primary-light);
+                color: var(--color-black);
+                .transfers__bottom-icon {
+                    fill: var(--color-primary-light);
+                    stroke: var(--color-black);
+                }
+            }
+            &:active {
+                background-color: var(--color-primary-shade);
+                color: var(--color-white);
+                border: 2px solid var(--color-primary-shade);
+                .transfers__bottom-icon {
+                    fill: var(--color-primary-shade);
+                    stroke: var(--color-white);
+                }
+            }
         }
         &-icon {
             width: 18px;
@@ -68,6 +95,13 @@
     &__article {
         display: flex;
         flex-direction: column;
+        &:hover {
+            .transfers__small-link {
+                width: 121px;
+                color: var(--color-primary);
+                background: url(../../img/arrow-link.svg) no-repeat right;
+            }
+        }
     }
     &__small {
         &-img {
@@ -97,8 +131,8 @@
             margin-bottom: 20px;
         }
         &-link {
-            width: 115px;
-            height: 15px;
+            width: 119px;
+            padding: 2px;
             align-items: center;
             font-weight: 400;
             font-size: 16px;
@@ -106,6 +140,14 @@
             color: var(--color-black);
             background: url(../../img/arrow.svg) no-repeat right;
             fill: var(--color-black);
+            transition: color .3s ease-in-out;
+            &:focus {
+                background-color: var(--color-primary-light);
+                outline: none;
+            }
+            &:active {
+                color: var(--color-primary-shade);
+            }
         }
     }
 }

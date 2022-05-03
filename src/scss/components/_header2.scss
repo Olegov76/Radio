@@ -6,6 +6,17 @@
     }
     &-btn {
         margin-right: 15px;
+        &:focus {
+            outline: none;
+            .header2__right-play {
+                fill: var(--color-primary-light);
+            }
+        }
+        &:active {
+            .header2__right-play {
+                fill: var(--color-primary-shade);
+            }
+        }
     }
     &-ofset {
         border-left: 1px solid var(--color-gray);
@@ -23,6 +34,10 @@
             width: 20px;
             height: 20px;
             fill: var(--color-gray);
+            transition: fill .3s ease-in-out;
+            &:hover {
+                fill: var(--color-primary);
+            }
         }
         &-top {
             margin: 0;
@@ -62,11 +77,23 @@
         @include flex-v-center;
     }
     &__item {
-        margin-right: 52px;
+        margin-right: 42px;
     }
     &__link {
         font-size: 16px;
         line-height: 16px;
         color: var(--color-black);
+        padding: 3px 5px;
+        transition: color .3s ease-in-out, background-color .3s ease-in-out;
+        &:hover {
+            color: var(--color-primary);
+        }
+        &:focus {
+            background-color: var(--color-primary-light);
+            outline: none;
+        }
+        &:active {
+            color: var(--color-primary-shade);
+        }
     }
 }

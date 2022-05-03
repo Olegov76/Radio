@@ -33,12 +33,26 @@
     }
     &__btn {
         align-items: center;
-        padding: 25px 54px;
+        padding: 24px 50px;
         background: var(--color-primary);
         border-radius: 40px;
         font-weight: 500;
         font-size: 20px;
         line-height: 20px;
+        border: 2px solid var(--color-primary);
         color: var(--color-white);
+        transition: background-color .3s ease-in-out border .3s ease-in-out;
+        &:hover {
+            background-color: var(--color-primary-light);
+            border: 2px solid var(--color-primary-light);
+        }
+        &:focus {
+            background-color: var(--color-primary-light);
+            border: 2px solid var(--color-primary-shade);
+        }
+        &:active {
+            background-color: var(--color-primary-shade);
+            border: 2px solid var(--color-primary-shade);
+        }
     }
 }

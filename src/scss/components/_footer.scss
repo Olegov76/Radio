@@ -10,12 +10,21 @@
     &__logo {
         margin-bottom: 20px;
     }
+    .footer__left-cos-icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--color-gray);
+    }
     &__left {
         &-soc {
             @include flex-v-center;
         }
-        &-itams:not(:last-child) {
-            margin-right: 21px;
+        &-itams {
+            width: 24px;
+            height: 24px;
+            &:not(:last-child) {
+                margin-right: 21px;
+            }
         }
     }
     &__right {

@@ -1,44 +1,89 @@
-.header {
-    padding: 20px 0;
-    &-contant {
-        @include flex-all-sb;
+    .header {
+        padding: 20px 0;
+        &-contant {
+            @include flex-all-sb;
+        }
+        &__logo {
+            width: 160px;
+            height: 20px;
+            &-link:focus {
+                outline: none;
+            }
+        }
+        &__search {
+            &-icon {
+                padding-top: 5px;
+                width: 24px;
+                height: 24px;
+                fill: var(--color-white);
+                stroke: var(--color-primary);
+                margin-right: 24px;
+                transition: stroke .3s ease-in-out;
+                &:hover {
+                    stroke: var(--color-primary-light);
+                }
+            }
+            &-btn {
+                &:focus {
+                    outline: none;
+                    .header__search-icon {
+                        stroke: var(--color-primary-shade);
+                    }
+                }
+            }
+        }
+        &__rigth {
+            @include flex-v-center;
+        }
+        &__btn {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 10px 31px;
+            border: solid 2px var(--color-black);
+            border-radius: 77px;
+            transition: border .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
+            &:hover {
+                background-color: var(--color-black);
+                color: var(--color-white);
+            }
+            &:focus {
+                background-color: var(--color-primary-light);
+            }
+            &:active {
+                background-color: var(--color-primary-shade);
+                border: 2px solid var(--color-primary-shade);
+            }
+        }
     }
-    &__logo {
-        width: 160px;
-        height: 20px;
-    }
-    &__search-icon {
-        padding-top: 5px;
-        width: 24px;
-        height: 24px;
-        fill: var(--color-white);
-        stroke: var(--color-primary);
-        margin-right: 24px;
-    }
-    &__rigth {
+
+    .nav__list {
         @include flex-v-center;
     }
-    &__btn {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 16px;
-        padding: 10px 31px;
-        border: solid 2px var(--color-black);
-        border-radius: 77px;
+
+    .nav__item:not(:last-child) {
+        margin-right: 38px;
     }
-}
 
-.nav__list {
-    @include flex-v-center;
-}
+    .nav__link {
+        color: var(--color-black);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        transition: color .3s ease-in-out, background-color .3s ease-in-out;
+        padding: 4px 10px;
+    }
 
-.nav__item:not(:last-child) {
-    margin-right: 58px;
-}
+    .nav__link:hover {
+        color: var(--color-primary);
+    }
 
-.nav__link {
-    color: var(--color-black);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-}
+    .nav__link:focus {
+        color: var(--color-white);
+        background-color: var(--color-primary-light);
+        outline: none;
+    }
+
+    .nav__link:active {
+        color: var(--color-primary-shade);
+    }
