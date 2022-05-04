@@ -2,6 +2,7 @@
 
 @mixin custom-checkbox {
     position: relative;
+    &:focus {}
     &__field {
         appearance: none;
         position: absolute;
@@ -43,6 +44,8 @@
 
 .custom-checkbox__field:focus+.custom-checkbox__content::before {
     outline-offset: 2px;
+    border: 1px solid var(--color-primary-shade);
+    background-color: transparent;
 }
 
 .custom-checkbox__field:disabled+.custom-checkbox__content {

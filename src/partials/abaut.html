@@ -11,32 +11,38 @@
             <img src="img/spiral.svg" alt="spiral" class="abaut-icon">
             <img src="img/sun.svg" alt="spiral" class="abaut-icon-sun">
         </div>
-        <div class="abaut__card">
-            <div class="abaut__card-acticle">
+        <ul class="list-reset abaut__card">
+            <li class="abaut__card-acticle">
                 <img src="img/abaut-card_1.jpg" alt="foto" class="abaut__card-img">
                 <h3 class="abaut__card-title">Дмитрий Гутенберг</h3>
                 <span class="abaut__card-descr">Эксперт (ну, почти) по всем вопросам (почти).</span>
-            </div>
-            <div class="abaut__card-acticle">
+            </li>
+            <li class="abaut__card-acticle">
                 <img src="img/abaut-card_2.jpg" alt="foto" class="abaut__card-img">
                 <h3 class="abaut__card-title">Анна Васильева</h3>
                 <span class="abaut__card-descr">Как я здесь оказалась? А главное — зачем?</span>
-            </div>
-            <div class="abaut__card-acticle">
+            </li>
+            <li class="abaut__card-acticle">
                 <img src="img/abaut-card_3.jpg" alt="foto" class="abaut__card-img">
                 <h3 class="abaut__card-title">Пётр Дмитриевский</h3>
                 <span class="abaut__card-descr">Господа! Внимание!! Благодарю за внимание!!!</span>
-            </div>
-            <div class="abaut__card-acticle">
+            </li>
+            <li class="abaut__card-acticle">
                 <img src="img/abaut-card_4.jpg" alt="foto" class="abaut__card-img">
                 <h3 class="abaut__card-title">Татьяна Флеганова</h3>
                 <span class="abaut__card-descr">Одна я в пальто стою красивая, а вокруг...</span>
-            </div>
-        </div>
+            </li>
+        </ul>
         <form id="form" class="abaut__form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
             <textarea class="abaut__form-area" name="comment" placeholder="Что скажете?"></textarea>
-            <input class="abaut__form-input" type="text" name="name" placeholder="Имя*" data-validate-field="name">
-            <input class="abaut__form-input" type="email" name="mail" placeholder="Email*" data-validate-field="email" data-validate-rules="mail">
+            <div class="abaut__form-box">
+                <label class="form-label">
+              <input class="abaut__form-input input-name" type="text" name="name" placeholder="Имя*" data-validate-field="name">
+            </label>
+                <label class="form-label">
+              <input class="abaut__form-input input-email" type="email" name="mail" placeholder="Email*" data-validate-field="email" data-validate-rules="mail">
+            </label>
+            </div>
             <button type="submit" id="submit" class="btn-reset abaut__form-btn">Отправить</button>
             <label class="custom-checkbox">
               <input type="checkbox" id="check-on" class="custom-checkbox__field" checked onchange="document.getElementById('submit').disabled = !this.checked;">
