@@ -106,6 +106,7 @@
     &__small {
         &-img {
             height: 144px;
+            width: 255px;
         }
         &-box {
             display: flex;
@@ -208,7 +209,7 @@
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    opacity: .7;
+    opacity: 1;
     color: var(--color-black);
 }
 
@@ -239,4 +240,52 @@
 
 .choices.choices1.is-focused {
     background-color: var(--color-gray);
+}
+
+@include big-desktop {
+    .transfers {
+        grid-template-columns: repeat(3, 1fr);
+        &__small-box {
+            padding-left: 16px;
+            padding-right: 0;
+            max-width: 255px;
+        }
+        &__bottom {
+            grid-row: 2 / 4;
+        }
+    }
+}
+
+@include tablet {
+    .transfers {
+        padding-bottom: 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        &__up {
+            grid-column: 2 span;
+        }
+        &__bottom {
+            border-top: 1px solid var(--color-light);
+            display: flex;
+            margin: 0 auto;
+            grid-row: 5 / 6;
+            grid-column: 2 span;
+            padding: 0 100px;
+            padding-top: 30px;
+            margin-bottom: 30px;
+            &-img {
+                margin-right: 20px;
+            }
+            &-btn {
+                width: 140px;
+                height: 40px;
+            }
+        }
+        &__article {
+            grid-column: 1 span;
+        }
+    }
+    .choices {
+        width: 255px;
+    }
 }

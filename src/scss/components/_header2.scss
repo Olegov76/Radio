@@ -6,6 +6,9 @@
     }
     &-btn {
         margin-right: 15px;
+        &-tablet {
+            display: none;
+        }
         &:focus {
             outline: none;
             .header2__right-play {
@@ -30,14 +33,20 @@
             border-left: solid 1px var(--color-gray);
             border-right: solid 1px var(--color-gray);
         }
+        &-one {
+            @include flex-v-center;
+            cursor: pointer;
+            &:hover {
+                .header2__right-play {
+                    fill: var(--color-primary);
+                }
+            }
+        }
         &-play {
             width: 20px;
             height: 20px;
             fill: var(--color-gray);
             transition: fill .3s ease-in-out;
-            &:hover {
-                fill: var(--color-primary);
-            }
         }
         &-top {
             margin: 0;
@@ -94,6 +103,41 @@
         }
         &:active {
             color: var(--color-primary-shade);
+        }
+    }
+}
+
+@include big-desktop {
+    .header2 {
+        padding: 23px 0;
+        &__right-bg {
+            display: none;
+        }
+        &__right {
+            padding-left: 8px;
+            width: 150px;
+        }
+        &-btn {
+            margin-right: 8px;
+        }
+    }
+    .nav2 {
+        &__list {
+            margin-left: -5px;
+        }
+        &__item {
+            margin-right: 17px;
+        }
+    }
+}
+
+@include tablet {
+    .header2 {
+        &__right-all {
+            display: none;
+        }
+        &-btn-tablet {
+            display: block;
         }
     }
 }

@@ -1,9 +1,16 @@
     .header {
         padding: 20px 0;
+        &__tablet-bg {
+            display: none;
+        }
         &-contant {
             @include flex-all-sb;
+            &-right {
+                @include flex-all-sb;
+            }
         }
         &__logo {
+            display: block;
             width: 160px;
             height: 20px;
             &-link:focus {
@@ -34,6 +41,7 @@
         }
         &__rigth {
             @include flex-v-center;
+            justify-content: flex-end;
         }
         &__btn {
             font-weight: 600;
@@ -55,6 +63,10 @@
                 border: 2px solid var(--color-primary-shade);
             }
         }
+    }
+
+    .nav {
+        margin-right: 80px;
     }
 
     .nav__list {
@@ -86,4 +98,44 @@
 
     .nav__link:active {
         color: var(--color-primary-shade);
+    }
+
+    @include big-desktop {
+        .header {
+            padding: 0;
+            &__tablet-bg {
+                display: block;
+                padding: 23px;
+                background-color: var(--color-light);
+            }
+            &-contant {
+                display: block;
+            }
+            &__logo {
+                width: 112px;
+                height: 14px;
+                &-link {
+                    display: none;
+                }
+            }
+            &-contant-right {
+                padding: 20px 0;
+            }
+        }
+        .nav {
+            margin-left: -10px;
+            margin-right: 37px;
+        }
+        .nav__item:not(:last-child) {
+            margin-right: 34px;
+        }
+    }
+
+    @include tablet {
+        .nav__list {
+            display: none;
+        }
+        .burger {
+            @include burger;
+        }
     }

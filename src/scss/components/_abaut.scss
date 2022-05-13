@@ -2,17 +2,28 @@
         background: #121723;
         padding: 94px 0;
         &__top {
-            @include flex-v-center;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 30px;
+            align-items: center;
             margin-bottom: 30px;
             &-text {
-                margin-right: 30px;
+                grid-column: 7 span;
             }
+        }
+        &-box-icon {
+            display: flex;
+            grid-column: 5 span;
         }
         &-icon {
             width: 160px;
             margin-right: 30px;
+            &-tablet {
+                display: none;
+            }
             &-sun {
                 width: 255px;
+                height: 255px;
             }
         }
         &__title {
@@ -187,4 +198,82 @@
     .custom-checkbox__field:disabled+.custom-checkbox__content {
         opacity: 0.4;
         pointer-events: none;
+    }
+
+    @include big-desktop {
+        .abaut {
+            &__top {
+                grid-template-columns: repeat(6, 1fr);
+                &-text {
+                    grid-column: 4 span;
+                }
+            }
+            &-box-icon {
+                grid-column: 2 span;
+            }
+            &-icon {
+                display: none;
+            }
+            &__card {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            &__form {
+                &-area {
+                    max-width: 824px;
+                }
+                &-input {
+                    width: 397px;
+                }
+            }
+        }
+    }
+
+    @include tablet {
+        .form-label:not(:last-child) {
+            margin-right: 0;
+        }
+        .abaut {
+            &__top {
+                display: block;
+                &-text {
+                    margin-bottom: 20px;
+                }
+            }
+            &-box-icon {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+            &-icon {
+                &-tablet {
+                    display: block;
+                    height: 114px;
+                    width: 639px;
+                    margin-left: -127px;
+                    margin-right: 30px;
+                }
+                &-sun {
+                    width: 112px;
+                    height: 112px;
+                }
+            }
+            &__form {
+                &-box {
+                    margin: 0;
+                }
+                &-area {
+                    max-width: 540px;
+                }
+                &-box {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                &-input {
+                    width: 540px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
     }

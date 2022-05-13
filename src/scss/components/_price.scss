@@ -32,6 +32,11 @@
             line-height: 180%;
             color: var(--color-white);
             margin-bottom: 12px;
+            &-link {
+                font-weight: 500;
+                font-size: 16px;
+                color: #F0D288;
+            }
         }
         &-price {
             padding-top: 18px;
@@ -84,6 +89,27 @@
                     background: url(../img/ya-icon-revers.svg) no-repeat left center;
                 }
             }
+        }
+    }
+}
+
+@include big-desktop {
+    .price__left-img {
+        min-width: 397px;
+    }
+}
+
+@include tablet {
+    .price {
+        padding-top: 54px;
+        &-flex {
+            display: block;
+        }
+        &__left-img {
+            margin-bottom: 50px;
+        }
+        &__right {
+            max-width: 100%;
         }
     }
 }

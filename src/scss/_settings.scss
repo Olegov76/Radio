@@ -69,7 +69,8 @@ a {
 
 .container {
     margin: 0 auto;
-    max-width: 1110px;
+    padding: 0 15px;
+    max-width: 1140px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -92,4 +93,18 @@ a {
 
 .page--ios .dis-scroll {
     position: relative;
+}
+
+@include big-desktop {
+    .container {
+        max-width: 854px;
+        padding: 0 15px;
+    }
+}
+
+@include tablet {
+    .container {
+        max-width: 570px;
+        padding: 0 15px;
+    }
 }
