@@ -11,7 +11,7 @@
             <img class="header__logo" src="img/logo.svg" alt="logo">
         </a>
         <div class="header-contant-right">
-            <nav class="nav">
+            <nav class="nav" data-menu>
                 <ul class="nav__list list-reset">
                     <li class="nav__item"><a href="#podcasts" class="nav__link">Подкасты</a></li>
                     <li class="nav__item"><a href="#transfers" class="nav__link">Передачи</a></li>
@@ -20,7 +20,9 @@
                     <li class="nav__item"><a href="#abaut" class="nav__link">О нас</a></li>
                 </ul>
             </nav>
-            <div class="burger"></div>
+            <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+              <span class="burger__line"></span>
+            </button>
             <div class="header__rigth">
                 <button class="header__search-btn btn-reset">
         <svg class="header__search-icon">

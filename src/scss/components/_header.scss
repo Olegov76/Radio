@@ -132,10 +132,34 @@
     }
 
     @include tablet {
-        .nav__list {
-            display: none;
+        .nav {
+            transition: opacity .3s;
+            opacity: 0;
+            position: relative;
+            &__list {
+                position: absolute;
+                flex-direction: column;
+                align-items: start;
+                background-color: var(--color-white);
+                opacity: 1;
+                padding-top: 50px;
+                left: -5px;
+            }
+            &__item {
+                margin-bottom: 30px;
+                padding: 0;
+                margin-right: 0;
+                margin-left: 0;
+            }
         }
         .burger {
             @include burger;
+            &--active {
+                right: 0;
+            }
+        }
+        .menu--active {
+            opacity: .9;
+            position: fixed;
         }
     }
