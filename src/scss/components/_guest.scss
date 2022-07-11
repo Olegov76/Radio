@@ -1,6 +1,13 @@
     .guest {
         background-color: var(--color-black);
         padding: 94px 0;
+        .content-none {
+            display: none;
+        }
+        .content-activ,
+        .tabs-btn {
+            display: block;
+        }
         &__title {
             margin: 0;
             margin-bottom: 12px;
@@ -218,15 +225,6 @@
         }
     }
 
-    .content-none {
-        display: none;
-    }
-
-    .content-activ,
-    .tabs-btn {
-        display: block;
-    }
-
     @include big-desktop {
         .guest {
             &__descr {
@@ -251,6 +249,60 @@
             }
             &__right-descr {
                 padding-right: 145px;
+            }
+        }
+    }
+
+    @include mobile {
+        .accordion {
+            &__content {
+                padding-bottom: 0;
+            }
+            &__list {
+                grid-template-columns: repeat(2, 1fr);
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--color-white);
+                &-itams {
+                    font-size: 14px;
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+            &__title {
+                font-size: 16px;
+            }
+            &__control {
+                padding: 10px 0;
+            }
+            &__icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .guest {
+            padding: 64px 0;
+            &__title {
+                font-size: 24px;
+            }
+            &-small {
+                font-size: 14px;
+            }
+            &__descr {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+            &__left {
+                margin-bottom: 30px;
+            }
+            &__right {
+                &-descr {
+                    padding: 0;
+                    margin-bottom: 39px;
+                }
+                &-link {
+                    padding: 9px 14px;
+                }
             }
         }
     }

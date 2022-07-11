@@ -113,3 +113,38 @@
         }
     }
 }
+
+@include mobile {
+    .price {
+        padding-bottom: 54px;
+        &__right {
+            &-title {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+            &-price {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            &-descr {
+                font-size: 14px;
+            }
+            &-link {
+                width: 256px;
+                padding: 17px 0;
+                &-contant {
+                    font-size: 16px;
+                }
+            }
+        }
+        &__left {
+            &-img {
+                min-width: 256px;
+                margin-bottom: 30px;
+            }
+            &-icon {
+                width: 62px;
+            }
+        }
+    }
+}

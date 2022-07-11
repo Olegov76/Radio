@@ -24,6 +24,13 @@ a {
     text-decoration: none;
 }
 
+.page__body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100%;
+    font-size: 16px;
+}
+
 .is-hidden {
     display: none !important;
     /* stylelint-disable-line declaration-no-important */
@@ -103,8 +110,18 @@ a {
 }
 
 @include tablet {
+    body {
+        padding-right: 0 !important;
+    }
     .container {
         max-width: 570px;
+        padding: 0 15px;
+    }
+}
+
+@include mobile {
+    .container {
+        max-width: 286px;
         padding: 0 15px;
     }
 }

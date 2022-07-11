@@ -1,6 +1,9 @@
 .header2 {
     border-top: 1px solid #e6e8ec;
     border-bottom: 1px solid #e6e8ec;
+    &__mobile-link {
+        display: none;
+    }
     &-contant {
         @include flex-all-sb;
     }
@@ -138,6 +141,32 @@
         }
         &-btn-tablet {
             display: block;
+        }
+    }
+}
+
+@include mobile {
+    .header2 {
+        display: flex;
+        &-contant {
+            display: none;
+        }
+        &__mobile {
+            &-link {
+                z-index: 9;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 16px;
+                color: var(--color-primary);
+                &-img {
+                    display: block;
+                    margin-right: 5px;
+                    margin-bottom: 2px;
+                }
+            }
         }
     }
 }

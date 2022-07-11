@@ -1,5 +1,6 @@
     .podcasts {
-        padding: 94px 0;
+        padding-top: 94px;
+        padding-bottom: 94px;
         background-color: var(--color-light);
         &__data {
             position: absolute;
@@ -96,22 +97,31 @@
             &__box-btn {
                 position: absolute;
                 right: 30px;
-                &:hover {
-                    .podcasts__article-btn {
-                        fill: var(--color-primary);
-                        stroke: var(--color-white);
-                    }
-                }
                 &:focus {
                     outline: none;
-                    .podcasts__article-btn {
+                    .podcasts__article-btn-circle {
+                        stroke: var(--color-primary-light);
+                        stroke-width: 2px;
+                    }
+                    .podcasts__article-btn-path {
                         fill: var(--color-primary-light);
-                        stroke: var(--color-white);
+                    }
+                }
+                &:hover {
+                    .podcasts__article-btn-circle {
+                        stroke: var(--color-primary);
+                    }
+                    .podcasts__article-btn-path {
+                        fill: var(--color-primary);
                     }
                 }
                 &:active {
-                    .podcasts__article-btn {
-                        fill: var(--color-primary-shade);
+                    .podcasts__article-btn-circle {
+                        stroke: var(--color-primary);
+                        fill: var(--color-primary);
+                    }
+                    .podcasts__article-btn-path {
+                        fill: var(--color-white);
                     }
                 }
             }
@@ -121,6 +131,14 @@
                 stroke: var(--color-gray);
                 fill: var(--color-white);
                 transition: fill .3s ease-in-out, stroke .3s ease-in-out;
+                &-circle {
+                    fill: var(--color-white);
+                    transition: .3s fill ease-in-out, .3s stroke ease-in-out;
+                }
+                &-path {
+                    fill: var(--color-gray);
+                    transition: .3s fill ease-in-out;
+                }
             }
             &-icon {
                 width: 13px;
@@ -210,5 +228,54 @@
                     width: 428px;
                 }
             }
+        }
+    }
+
+    @include mobile {
+        .podcasts {
+            padding-top: 54px;
+            padding-bottom: 54px;
+            &__title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            &__article {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                &-img {
+                    height: 72px;
+                    width: 256px;
+                }
+                &-top {
+                    padding: 16px;
+                }
+                &-title {
+                    font-size: 16px;
+                    margin-bottom: 1px;
+                }
+                &-avtor {
+                    font-size: 12px;
+                }
+            }
+            &__data {
+                position: absolute;
+                top: 0;
+                bottom: 183px;
+                padding: 3px 6px;
+                align-items: center;
+                font-size: 10px;
+                padding-bottom: 2px;
+            }
+            &__btn-basic {
+                padding: 17px 30px;
+                font-size: 16px;
+            }
+            &__grid {
+                margin-bottom: 0;
+            }
+        }
+        .none {
+            display: none;
         }
     }

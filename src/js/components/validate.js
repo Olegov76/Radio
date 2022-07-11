@@ -5,6 +5,11 @@ const rules = [{
             rule: 'required',
             value: true,
             errorMessage: 'Заполните имя!'
+        }],
+        rules: [{
+            rule: 'email',
+            value: true,
+            errorMessage: 'Недопустимый формат'
         }]
     },
     {

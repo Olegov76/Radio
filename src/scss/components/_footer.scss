@@ -10,7 +10,7 @@
     &__logo {
         margin-bottom: 20px;
     }
-    .footer__left-cos-icon {
+    .footer__left-soc-icon {
         width: 24px;
         height: 24px;
         fill: var(--color-gray);
@@ -50,12 +50,12 @@
         }
     }
     &__right {
-        @include flex-v-center;
-        &-list {
-            display: block;
-            &:not(:last-child) {
-                margin-right: 109px;
-            }
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 109px;
+        row-gap: 20px;
+        &-mobile {
+            display: none;
         }
         &-link {
             font-weight: 400;
@@ -73,9 +73,6 @@
             &:active {
                 color: var(--color-primary-shade);
             }
-        }
-        &-itams:not(:last-child) {
-            margin-bottom: 20px;
         }
     }
     &__span {
@@ -108,11 +105,56 @@
         &__left {
             margin-bottom: 80px;
         }
+    }
+}
+
+@include mobile {
+    .footer {
+        padding-top: 54px;
+        &__wave {
+            margin-top: 10px;
+        }
+        &__contant {
+            margin-bottom: 0;
+        }
         &__right {
+            display: none;
+            &-mobile {
+                display: block;
+                background-color: var(--color-black);
+            }
+            &-ofset {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 78px;
+                padding-top: 30px;
+                padding-bottom: 10px;
+            }
+            &-itams {
+                margin-bottom: 20px;
+            }
+        }
+        &__left {
             display: flex;
-            justify-content: space-between;
-            &-list:not(:last-child) {
-                margin-right: 157px;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 54px;
+            margin-bottom: 0;
+            &-itams {
+                width: 36px;
+                height: 36px;
+            }
+            &-logo {
+                display: block;
+                margin: 0 auto;
+            }
+            &-soc {
+                align-items: center;
+                vertical-align: top;
+                &-icon {
+                    height: 36px !important;
+                    width: 36px !important;
+                }
             }
         }
     }
