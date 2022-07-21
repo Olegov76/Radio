@@ -1,17 +1,12 @@
 import { validateForms } from '../functions/validate-forms';
 const rules = [{
-        ruleSelector: '.input-name',
-        rules: [{
-            rule: 'required',
-            value: true,
-            errorMessage: 'Заполните имя!'
-        }],
-        rules: [{
-            rule: 'email',
-            value: true,
-            errorMessage: 'Недопустимый формат'
-        }]
-    },
+  ruleSelector: '.input-name',
+  rules: [{
+      rule: 'required',
+      value: true,
+      errorMessage: 'Заполните имя!'
+  }]
+},
     {
         ruleSelector: '.input-email',
         rules: [{
