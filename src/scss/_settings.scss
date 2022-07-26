@@ -35,6 +35,9 @@ a {
     display: none !important;
     /* stylelint-disable-line declaration-no-important */
 }
+.is-visible {
+    display: block !important;
+}
 
 .btn-reset {
     border: none;
