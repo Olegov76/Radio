@@ -357,6 +357,7 @@
     .playlists {
         &__tabs {
             display: block;
+            overflow: hidden;
         }
         &__left {
             &-title {
@@ -406,6 +407,10 @@
         .swiper-slide-active {
             background-color: var(--color-primary);
             color: var(--color-white);
+        }
+        .swiper {
+            overflow: hidden;
+            width: calc(100vw - (100vw - 286px) / 2);
         }
     }
 }

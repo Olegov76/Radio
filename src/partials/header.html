@@ -2,36 +2,86 @@
     <div class="header__tablet-bg">
         <div class="container">
             <a href="#" class="header__logo-tablet">
-                <img class="header__logo" src="img/logo.svg" alt="logo">
+                <img class="header__logo" src="img/logo.svg" alt="logo" />
             </a>
         </div>
     </div>
     <div class="container header-contant">
         <a href="#" class="header__logo-link">
-            <img class="header__logo" src="img/logo.svg" alt="logo">
+            <img class="header__logo" src="img/logo.svg" alt="logo" />
         </a>
         <div class="header-contant-right">
             <nav class="nav" data-menu>
                 <ul class="nav__list list-reset">
-                    <li class="nav__item"><a href="#podcasts" class="nav__link" data-menu-item data-scroll>Подкасты</a></li>
-                    <li class="nav__item"><a href="#transfers" class="nav__link" data-menu-item>Передачи</a></li>
-                    <li class="nav__item"><a href="#guest" class="nav__link" data-menu-item>Гости</a></li>
-                    <li class="nav__item"><a href="#playlists" class="nav__link" data-menu-item>Плейлисты</a></li>
-                    <li class="nav__item"><a href="#abaut" class="nav__link" data-menu-item>О нас</a></li>
+                    <li class="nav__item">
+                        <a href="#podcasts" class="nav__link" data-menu-item data-scroll>Подкасты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#transfers" class="nav__link" data-menu-item data-scroll>Передачи</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#guest" class="nav__link" data-menu-item data-scroll>Гости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#playlists" class="nav__link" data-menu-item data-scroll>Плейлисты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#abaut" class="nav__link" data-menu-item data-scroll>О нас</a>
+                    </li>
                 </ul>
             </nav>
             <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
-              <span class="burger__line"></span>
+                <span class="burger__line"></span>
             </button>
             <div class="header__rigth">
                 <button class="header__search-btn btn-reset">
-        <svg class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+                    <svg class="header__search-icon" width="24" height="24" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                            stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="btn-reset header__btn" data-graph-path="registrations">
+                    Вход
+                </button>
+                <div class="graph-modal">
+                    <div class="graph-modal__container  registrations__box" role="dialog" aria-modal="true"
+                        data-graph-target="registrations">
+                        <div class="graph-modal__content">
+                            <h2 class="registrations__title">Вход</h2>
+                            <p class="registrations__descr">
+                                Если у вас ещё нет аккаунта,
+                                <a href="#">зарегестрируйтесь</a>
+                            </p>
+                            <form id="form" class="registrations__form"
+                                action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+                                <input type="text" class="registrations__input input-name" type="text" name="name"
+                                    data-validate-field="name" placeholder="Логин" />
+                                <input type="text" class="registrations__input input-name" type="text" name="name"
+                                    data-validate-field="name" placeholder="Пароль" />
+                                <button type="submit" id="submit" class="btn-reset registrations__btn">
+                                    Войти
+                                </button>
+                            </form>
+                            <p class="registrations__span">Войти с помощью:</p>
+                            <div class="registrations__box-link">
+                                <a class="registrations__soc-link" href="#"><img class="registrations__soc-link-img"
+                                        src="img/fb-reg.svg" alt="fb" /> </a><a class="registrations__soc-link"
+                                    href="#"><img class="registrations__soc-link-img" src="img/vk-reg.svg" alt="fb" />
+                                </a><a class="registrations__soc-link" href="#"><img class="registrations__soc-link-img"
+                                        src="img/google-reg.svg" alt="fb" /></a>
+                            </div>
+                            <button class="btn-reset graph-modal__close js-modal-close registrations__close-btn"
+                                aria-label="Закрыть модальное окно">
+                                <img src="img/close-btn.svg" alt="close" />
+                            </button>
 
-      </button>
-                <button class="btn-reset header__btn">Вход</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

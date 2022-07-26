@@ -1,11 +1,18 @@
 import { validateForms } from '../functions/validate-forms';
 const rules = [{
   ruleSelector: '.input-name',
-  rules: [{
+  rules: [
+    {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Имя дожно сдержать больше 2 символов'
+    },
+    {
       rule: 'required',
       value: true,
       errorMessage: 'Заполните имя!'
-  }]
+    }
+  ]
 },
     {
         ruleSelector: '.input-email',

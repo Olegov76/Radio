@@ -49,7 +49,7 @@
             width: 20px;
             height: 20px;
             fill: var(--color-gray);
-            transition: fill .3s ease-in-out;
+            transition: fill 0.3s ease-in-out;
         }
         &-top {
             margin: 0;
@@ -72,13 +72,12 @@
         &-age {
             width: 30px;
             height: 30px;
-            align-items: center;
             border-radius: 100%;
             background-color: #fff;
             font-size: 12px;
             line-height: 16px;
-            padding-top: 4px;
-            padding-left: 2px;
+            text-align: center;
+            padding-top: 7px;
             color: var(--color-gray);
         }
     }
@@ -96,7 +95,7 @@
         line-height: 16px;
         color: var(--color-black);
         padding: 3px 5px;
-        transition: color .3s ease-in-out, background-color .3s ease-in-out;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
         &:hover {
             color: var(--color-primary);
         }
