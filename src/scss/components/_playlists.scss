@@ -399,18 +399,24 @@
             border-radius: 77px;
             width: auto;
             padding: 7px 18px;
+            &:focus {
+                background-color: var(--color-primary);
+                color: var(--color-white);
+            }
             &:active {
                 background-color: var(--color-primary);
                 color: var(--color-white);
             }
         }
-        .swiper-slide-active {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-        }
         .swiper {
             overflow: hidden;
             width: calc(100vw - (100vw - 286px) / 2);
+        }
+        .content-none2 {
+            display: none;
+        }
+        .content-activ2 {
+            display: grid;
         }
     }
 }
