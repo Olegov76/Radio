@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .querySelector(`[data-target="${path}"]`)
                 .classList.add("content-activ2");
         });
+        console.log(tabBtn);
     });
 });
 // let tabBtn = document.querySelectorAll(".tabs-btn2");

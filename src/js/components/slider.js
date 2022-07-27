@@ -1,7 +1,8 @@
-import { auto } from '@popperjs/core';
-import Swiper, {} from 'swiper';
+import { auto } from "@popperjs/core";
+import Swiper from "swiper";
 Swiper.use([]);
-const swiper = new Swiper('.playlists__tabs', {
+const swiper = new Swiper(".playlists__tabs", {
     slidesPerView: "auto",
     spaceBetween: 15,
+    loop: true,
 });
