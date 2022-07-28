@@ -162,11 +162,11 @@
             line-height: 16px;
             color: var(--color-white);
             transition: color 0.3s ease-in-out;
-            &:hover {
-                color: var(--color-primary-light);
-            }
             &:focus {
                 outline: none;
+                color: var(--color-primary-light);
+            }
+            &:hover {
                 color: var(--color-primary-light);
             }
             &:active {
@@ -292,10 +292,8 @@
         &__contant {
             display: block;
         }
-        &__left {
-            margin-bottom: 50px;
-        }
         &__right {
+            padding-top: 50px;
             &-img {
                 height: 220px;
             }
@@ -316,6 +314,7 @@
             padding-bottom: 20px;
             border-bottom: 1px solid var(--color-white);
             &-itams {
+                text-align: center;
                 font-size: 14px;
                 &:not(:last-child) {
                     margin-bottom: 30px;
@@ -354,10 +353,8 @@
             font-size: 14px;
             margin-bottom: 30px;
         }
-        &__left {
-            margin-bottom: 30px;
-        }
         &__right {
+            padding-top: 50px;
             &-img {
                 height: 159px;
             }

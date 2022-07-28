@@ -1,8 +1,8 @@
 .playlists {
-    .content-none {
+    .content-none2 {
         display: none;
     }
-    .content-activ,
+    .content-activ2,
     .tabs-btn {
         display: grid;
     }
@@ -412,9 +412,7 @@
             overflow: hidden;
             width: calc(100vw - (100vw - 286px) / 2);
         }
-        .content-none2 {
-            display: none;
-        }
+
         .content-activ2 {
             display: grid;
         }
