@@ -282,6 +282,7 @@
 @include tablet {
     .guest {
         .plug {
+            margin-top: 50px;
             height: 220px;
             padding-top: 38px;
             &-img {
@@ -334,6 +335,7 @@
     }
     .guest {
         .plug {
+            margin-top: 30px;
             height: 159px;
             padding-top: 34px;
             &-img {
