@@ -5,7 +5,9 @@
                 <h2 class="abaut__title">О нас</h2>
                 <h4 class="abaut__descr-bold">Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!</h4>
                 <p class="abaut__descr">
-                    Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув
+                    Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому
+                    вы можете поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём! Это
+                    можно сделать либо написав нам в форме ниже, либо кликнув
                     на наши соцсети в подвале сайта. Спасибо! Услышимся! :)</p>
             </div>
             <div class="abaut-box-icon">
@@ -56,21 +58,25 @@
                 <span class="abaut__card-descr">Одна я в пальто стою красивая, а вокруг...</span>
             </li>
         </ul>
-        <form id="form" class="abaut__form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+        <form id="form-abaut" class="abaut__form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on"
+            method="POST">
             <textarea class="abaut__form-area" name="comment" placeholder="Что скажете?"></textarea>
             <div class="abaut__form-box">
                 <label class="form-label">
-              <input class="abaut__form-input input-name" type="text" name="name" placeholder="Имя*"  data-validate-field="name">
-            </label>
+                    <input class="abaut__form-input input-name" type="text" name="name" placeholder="Имя*"
+                        data-validate-field="name">
+                </label>
                 <label class="form-label">
-              <input class="abaut__form-input input-email" type="email" name="mail" placeholder="Email*" data-validate-field="email">
-            </label>
+                    <input class="abaut__form-input input-email" type="email" name="mail" placeholder="Email*"
+                        data-validate-field="email">
+                </label>
             </div>
-            <button type="submit" id="submit" class="btn-reset abaut__form-btn">Отправить</button>
+            <button type="submit" id="submit-2" class="btn-reset abaut__form-btn">Отправить</button>
             <label class="custom-checkbox">
-              <input type="checkbox" id="check-on" class="custom-checkbox__field" checked onchange="document.getElementById('submit').disabled = !this.checked;">
-              <span class="custom-checkbox__content"></span>
-              Согласен на обработку персональных данных
+                <input type="checkbox" id="check-on" class="custom-checkbox__field" checked
+                    onchange="document.getElementById('submit').disabled = !this.checked;">
+                <span class="custom-checkbox__content"></span>
+                Согласен на обработку персональных данных
             </label>
         </form>
     </div>
